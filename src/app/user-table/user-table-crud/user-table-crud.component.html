@@ -1,0 +1,79 @@
+<div class="container">
+  <div mat-dialog-title style="text-align: center;" *ngIf="data.value==2">Update Users</div>
+    <div mat-dialog-title style="text-align: center;" *ngIf="data.value==1">Add User</div>
+  <mat-dialog-content>
+    <form #exampleForm="ngForm" [formGroup]="userFormGroup" autocomplete="off">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <mat-form-field class="example-full-width">
+            <input matInput maxlength="50" placeholder="User Name" name="userName" formControlName="userName"
+              [(ngModel)]="user.userName" autocomplete="off" required>
+            <mat-error>
+              <control-messages [control]="userFormGroup.controls.userName"></control-messages>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <mat-form-field class="example-full-width">
+            <input matInput  placeholder="Email" name="email" formControlName="email"
+              [(ngModel)]="user.email" autocomplete="off" required>
+            <mat-error>
+              <control-messages [control]="userFormGroup.controls.email"></control-messages>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <mat-form-field class="example-full-width">
+            <textarea matInput rows="1" maxlength='200' name="address" formControlName="address"placeholder="Address"
+                        [(ngModel)]="user.address" required></textarea>
+            <mat-error>
+              <control-messages [control]="userFormGroup.controls.address"></control-messages>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <mat-form-field class="example-full-width">
+            <input matInput maxlength="50" placeholder="City" name="city" formControlName="city"
+              [(ngModel)]="user.city" autocomplete="off" required>
+            <mat-error>
+              <control-messages [control]="userFormGroup.controls.city"></control-messages>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <mat-form-field class="example-full-width">
+            <input matInput maxlength="50" placeholder="Country" name="country" formControlName="country"
+              [(ngModel)]="user.country" autocomplete="off" required>
+            <mat-error>
+              <control-messages [control]="userFormGroup.controls.country"></control-messages>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Experience" name="yearOfExp" formControlName="yearOfExp"
+              [(ngModel)]="user.yearOfExp" autocomplete="off" required>
+            <mat-error>
+              <control-messages [control]="userFormGroup.controls.yearOfExp"></control-messages>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Salary" name="salary" formControlName="salary"
+              [(ngModel)]="user.salary" autocomplete="off" required>
+            <mat-error>
+              <control-messages [control]="userFormGroup.controls.salary"></control-messages>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" *ngIf="data.value==1" style="float: right;" (click)="saveUserTable()">Save </button>
+      <button mat-raised-button color="primary" *ngIf="data.value==2" style="float: right;" (click)="saveUserTable()">Update </button>
+    <button mat-raised-button color="warn" style="float: right;" (click)="onNoClick()">Cancel </button>
+  </mat-dialog-actions>
+</div>
+<notifier-container></notifier-container>

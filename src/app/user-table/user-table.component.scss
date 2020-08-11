@@ -1,0 +1,58 @@
+
+
+.example-full-width {
+  font-size: 14px;
+  text-align: center;
+}
+
+th {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+}
+mat-grid-tile {
+  background: lightblue;
+}
+
+.example-table-container {
+  position: relative;
+  overflow: auto;
+}
+
+.studentimage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 20px;
+}
+.example-full-width {
+  text-align: center;
+  width: 100%;
+}
+table {
+  // margin-top: 20px;
+  width: 100%;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0.7em 0 0.7em 0 !important;
+  top: -0.25em;
+}
+.mat-card{
+  margin-top: 30px;
+}
+.addbutton{
+  float: right;
+  padding: 5px;
+  // padding-right: 10px;
+  // margin-right: 10px;
+}
+.exportbutton{
+  float: right;
+  padding: 5px;
+  // padding-right: 10px;
+  // margin-right: 10px;
+}
+
+#myButton {
+  width: 150px;
+  height: 40px;
+  }
